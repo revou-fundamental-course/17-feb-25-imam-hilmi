@@ -1,1 +1,316 @@
-/* Dokumen CSS */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Yusei Magic", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #fff;
+}
+
+/* flex header */
+header {
+    width: 100%;
+    background-color: #eeffaf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 80px;
+    margin-left: 20px;
+}
+
+header nav {
+    margin-right: 20px;
+}
+
+header nav a {
+    padding: 10px;
+    margin-left: 8px;
+    background-color: #117011;
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline solid #fff;
+}
+
+/* Hide the list icon by default */
+.list-icon {
+    display: none;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+}
+
+main>h1,
+main>p {
+    text-align: center;
+}
+
+main>p {
+    margin-bottom: 40px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+    position: relative;
+}
+
+/* Hide the images by default */
+.my-slides {
+    display: none;
+}
+
+.my-slides img {
+    width: 100%;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 43%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Centered dot */
+.centered-dots {
+    text-align: center;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.slideshow-container>p {
+    text-align: center;
+    font-style: italic;
+    margin: 10px 0 20px;
+}
+
+/* Paragraph Content */
+.paragraph-content {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Our Menu Section */
+h2 {
+    text-align: center;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Menu Card */
+.menu-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    max-width: 300px;
+    margin: 40px;
+    text-align: center;
+}
+
+.menu-card img {
+    width: 300px;
+}
+
+.menu-card .price {
+    color: grey;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.menu-card p:not(.price) {
+    padding: 8px;
+    text-align: justify;
+}
+
+p.caption-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.flex-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Form */
+.form-container {
+    width: 50%;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+.form-container>p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    display: inline-block;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+button {
+    background-color: #117011;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0b460b;
+}
+
+.contact-info {
+    width: 25%;
+    height: 180px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+.contact-info h4 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-top: 10px;
+}
+
+.contact-info p a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background-color: #eeffaf;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Responsive */
+/* Max Width 600 */
+@media screen and (max-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    header img {
+        margin-left: 0;
+    }
+
+    .top-navbar {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .top-navbar a {
+        display: inline-block;
+        width: 80%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+/* Max Width 768px */
+@media screen and (max-width: 768px) {
+    .flex-content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+}
